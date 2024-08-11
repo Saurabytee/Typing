@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Practice Platform</h1>
+        <textarea id="inputParagraph" placeholder="Enter the paragraph you want to practice..." rows="5"></textarea>
+        <button onclick="startTypingTest()">Start Typing Test</button>
+        
+        <div id="typingTestSection" style="display:none;">
+            <div id="displayParagraph"></div>
+            <textarea id="typingArea" placeholder="Start typing here..." rows="5" disabled oninput="startTimer()"></textarea>
+            <button onclick="submitTypingTest()">Submit</button>
+        </div>
+
+        <div id="resultsSection" style="display:none;">
+            <h2>Results</h2>
+            <p>Total Words: <span id="totalWords"></span></p>
+            <p>Errors: <span id="errors"></span></p>
+            <p>Accuracy: <span id="accuracy"></span>%</p>
+            <p>Typing Time: <span id="typingTime"></span> seconds</p>
+            <h3>Your Typed Paragraph with Errors Highlighted:</h3>
+            <div id="highlightedErrors"></div>
+            <button onclick="resetTest()">New Typing Test</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
